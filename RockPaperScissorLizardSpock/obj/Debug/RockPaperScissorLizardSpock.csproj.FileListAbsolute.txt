@@ -1,1 +1,2 @@
 C:\Users\tgood\Desktop\CodingProjects\RockPaperScissorLizardSpock\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe.config
+C:\Users\tgood\Desktop\CodingProjects\RockPaperScissorLizardSpock\RockPaperScissors\RockPaperScissorLizardSpock\bin\Debug\RockPaperScissorLizardSpock.exe.config
