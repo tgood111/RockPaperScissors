@@ -8,8 +8,24 @@ namespace RockPaperScissorLizardSpock
 {
     public class Player
     {
-        int score;
-        string name;
-        string choice;
+       public int roundScore;
+       public string name;
+       public string choice;
+    
+    public Player()
+    {
+
+    }
+    public void IncrementScore()
+        {
+            roundScore++;
+        }
+        public virtual void GetRPSLP()
+        { 
+        
+            Console.WriteLine("Choose between: Rock, Paper, Scissor, Lizard, Spock");
+             choice = (Console.ReadLine());
+            
+        }
     }
 }
