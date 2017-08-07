@@ -10,6 +10,9 @@ namespace RockPaperScissorLizardSpock
     {
         static void Main(string[] args)
         {
+            Rules ruleSet = new Rules();
+            ruleSet.DisplayRules();
+            Console.ReadLine();
         }
     }
 }

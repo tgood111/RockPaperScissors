@@ -7,7 +7,39 @@ using System.Threading.Tasks;
 namespace RockPaperScissorLizardSpock
 {
     public class Game
-    { 
+    {
+        Rules rules;
+        Player playerOne;
+        Player playerTwo;
+        public Game()
+        {
+            rules = new Rules();
+        }
+        public void GetNumberOfPlayers()
+        {
+
+        }
+
+        public void ComparePlayerChoices()
+        {
+            if (playerOne.choice == playerTwo.choice)
+            {
+                Console.WriteLine("It was a tie!");
+                playerOne.GetRPSLP();
+                playerTwo.GetRPSLP();
+                ComparePlayerChoices();
+            }
+            else if (playerOne.choice == "Rock" && playerTwo.choice == "Paper")
+            {
+                Console.WriteLine(playerTwo.name + " won this round.");
+                playerTwo.IncrementScore();
+            }
+            else if (playerOne.choice == "Rock" && playerTwo.choice == "Scissors")
+            {
+                Console.WriteLine(playerOne.name + " won this round.");
+                playerOne.IncrementScore();
+            }
+        }
     //1. display rules
     //2. how many players
     //3. get player names

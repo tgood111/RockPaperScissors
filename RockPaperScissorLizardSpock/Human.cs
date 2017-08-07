@@ -8,6 +8,9 @@ namespace RockPaperScissorLizardSpock
 {
     public class Human: Player
     {
+        public Human()
+        {
 
+        }
     }
 }
