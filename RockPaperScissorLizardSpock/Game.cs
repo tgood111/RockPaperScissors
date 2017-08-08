@@ -17,8 +17,30 @@ namespace RockPaperScissorLizardSpock
         }
         public void GetNumberOfPlayers()
         {
-            Console.WriteLine();
-        }
+            Console.WriteLine("How many players? 1 or 2");
+            int numberOfPlayers = int.Parse(Console.ReadLine());
+            if (numberOfPlayers == 1)
+            {
+                playerOne = new Human();
+                playerTwo = new Computer();
+                playerOne.name = GetPlayerName();
+                playerTwo.name = GetPlayerName();
+            }
+            else if (numberOfPlayers == 2)
+            {
+                playerOne = new Human();
+                playerTwo = new Human();
+                playerOne.name = GetPlayerName();
+                playerTwo.name = GetPlayerName();
+            }
+            else
+            {
+                Console.WriteLine("Please choose 1 or 2");
+                GetNumberOfPlayers();
+            }
+                
+            }
+        
 
         public void ComparePlayerChoices()
         {
