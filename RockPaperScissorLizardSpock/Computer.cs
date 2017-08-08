@@ -13,7 +13,7 @@ namespace RockPaperScissorLizardSpock
         {
 
         }
-        public override void GetRPSLP()
+        public override void GetRPSLS()
         {        
             choice = MoveList[random.Next(0, MoveList.Count)];
         }

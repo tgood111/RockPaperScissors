@@ -49,11 +49,13 @@ namespace RockPaperScissorLizardSpock
 
         public void ComparePlayerChoices()
         {
+            playerOne.GetRPSLS();
+            playerTwo.GetRPSLS();
             if (playerOne.choice == playerTwo.choice)
             {
                 Console.WriteLine("It was a tie!");
-                playerOne.GetRPSLP();
-                playerTwo.GetRPSLP();
+                playerOne.GetRPSLS();
+                playerTwo.GetRPSLS();
                 ComparePlayerChoices();
             }
             else if (playerOne.choice == "Rock" && playerTwo.choice == "Paper")
@@ -171,7 +173,7 @@ namespace RockPaperScissorLizardSpock
         }
         public void RunGame()
         {
-            rules.DisplayRules();
+           
             GetNumberOfPlayers();
             while (playerOne.roundScore < 2 && playerTwo.roundScore < 2)
             {
@@ -180,7 +182,7 @@ namespace RockPaperScissorLizardSpock
             }
             AskPlayAgain();
             }
-            public void AskPlayAgain()
+        public void AskPlayAgain()
         {
             Console.WriteLine("Play again? yes or no");
             string userInput = Console.ReadLine();

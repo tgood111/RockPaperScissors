@@ -13,6 +13,8 @@ namespace RockPaperScissorLizardSpock
             Rules ruleSet = new Rules();
             ruleSet.DisplayRules();
             Console.ReadLine();
+            Game game = new Game();
+            game.RunGame();
         }
     }
 }

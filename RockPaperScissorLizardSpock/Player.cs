@@ -21,11 +21,12 @@ namespace RockPaperScissorLizardSpock
         {
             roundScore++;
         }
-        public virtual void GetRPSLP()
+        public virtual void GetRPSLS()
         { 
         
-            Console.WriteLine("Choose between: Rock, Paper, Scissor, Lizard, Spock.");
+            Console.WriteLine("Choose between: (R)ock, (P)aper, (S)cissor, (L)izard, (S)pock. ");
              choice = (Console.ReadLine());
+
             switch (choice)
             {
                 case "Rock":
