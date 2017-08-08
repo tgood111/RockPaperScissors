@@ -40,7 +40,12 @@ namespace RockPaperScissorLizardSpock
             }
                 
             }
-        
+        public string GetPlayerName()
+        {
+            Console.WriteLine("Enter player name");
+            string name = Console.ReadLine();
+            return name;
+        }
 
         public void ComparePlayerChoices()
         {
