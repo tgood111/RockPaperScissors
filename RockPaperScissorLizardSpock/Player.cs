@@ -24,8 +24,8 @@ namespace RockPaperScissorLizardSpock
         public virtual void GetRPSLS()
         { 
         
-            Console.WriteLine("Choose between: (R)ock, (P)aper, (S)cissor, (L)izard, (S)pock. ");
-             choice = (Console.ReadLine());
+            Console.WriteLine("Choose between: (R)ock, (P)aper, (S)cissor, (L)izard, (S)pock. Capitalize first letter of chosen selection");
+            choice = Console.ReadLine();
 
             switch (choice)
             {
