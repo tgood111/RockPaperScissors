@@ -38,8 +38,8 @@ namespace RockPaperScissorLizardSpock
                 Console.WriteLine("Please choose 1 or 2");
                 GetNumberOfPlayers();
             }
-                
-            }
+
+        }
         public string GetPlayerName()
         {
             Console.WriteLine("Enter player name");
@@ -158,24 +158,52 @@ namespace RockPaperScissorLizardSpock
             }
         }
 
-        public void DeterineGameWinner()
+        public void DetermineGameWinner()
         {
-                if(playerOne.roundScore == 2)
-                {
+            if (playerOne.roundScore == 2)
+            {
                 Console.WriteLine($"{ playerOne.name} wins the game");
-                }
-                else if(playerTwo.roundScore == 2)
-                {
+            }
+            else if (playerTwo.roundScore == 2)
+            {
                 Console.WriteLine($"{playerTwo.name} wins");
             }
         }
-    //1. display rules
-    //2. how many players
-    //3. get player names
-    //4. make a choice
-    //5. Compare choices to determine a round winner
-    //6. Give point to round winner
-    //7. Check if we have a game winner (if score == 2)
-    //8. If we don't have a game winner, rinse and repeat from step 4
+        public void RunGame()
+        {
+            rules.DisplayRules();
+            GetNumberOfPlayers();
+            while (playerOne.roundScore < 2 && playerTwo.roundScore < 2)
+            {
+                ComparePlayerChoices();
+                DetermineGameWinner();
+            }
+            AskPlayAgain();
+            }
+            public void AskPlayAgain()
+        {
+            Console.WriteLine("Play again? yes or no");
+            string userInput = Console.ReadLine();
+            if (userInput.ToLower() == "yes")
+            { 
+                
+                    RunGame();
+                }
+                else
+                {
+                    Console.WriteLine("Thanks for playing!");
+                    Environment.Exit(0);
+              
+            }
+        }
     }
 }
+
+  //1. display rules
+                //2. how many players
+                //3. get player names
+                //4. make a choice
+                //5. Compare choices to determine a round winner
+                //6. Give point to round winner
+                //7. Check if we have a game winner (if score == 2)
+                //8. If we don't have a game winner, rinse and repeat from step 4
